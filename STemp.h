@@ -10,8 +10,8 @@ OneWire oneWireObjeto2(sensor_temperatura2);
 DallasTemperature sensorDS18B20_1(&oneWireObjeto1);
 DallasTemperature sensorDS18B20_2(&oneWireObjeto2);
 
-void TEMP_SENSORS_BEGIN(){
-  sensorDS18B20_1.setResolution(10);
+void TEMP_SENSORS_BEGIN(byte resolution){
+  sensorDS18B20_1.setResolution(resolution);
   delay(100);
   sensorDS18B20_1.begin();
   sensorDS18B20_2.begin();
