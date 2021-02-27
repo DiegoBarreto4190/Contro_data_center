@@ -12,19 +12,19 @@ DallasTemperature sensorDS18B20_2(&oneWireObjeto2);
 
 void TEMP_SENSORS_BEGIN(byte resolution){
   sensorDS18B20_1.setResolution(resolution);
-  delay(100);
+  delay(10);
   sensorDS18B20_1.begin();
   sensorDS18B20_2.begin();
 }
 
 float _t1(){
   sensorDS18B20_1.requestTemperatures();
-  delay(100);
+  delay(10);
   return sensorDS18B20_1.getTempCByIndex(0);
 }
 
 float _t2(){
   sensorDS18B20_2.requestTemperatures();
-  delay(100);
+  delay(10);
   return sensorDS18B20_2.getTempCByIndex(0);
 }
